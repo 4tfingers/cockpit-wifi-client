@@ -1,7 +1,7 @@
 #!/bin/sh
 ssid_list='{'
 index=0
-scan=$(nmcli -e no -g ssid dev wifi list --rescan yes)
+scan=$(nmcli -e no -g ssid dev wifi list --rescan yes ifname wlan1)
 IFS=$'\n'
 for line in $scan; do
   index=$((index+1))
