@@ -25,7 +25,7 @@ export class Application extends React.Component {
     render() {
         return (
             <Card isSelectable isClickable>
-                <CardTitle>Configuracion WiFi</CardTitle>
+                <CardTitle>WiFi Configuration</CardTitle>
                 <CardBody>
                     <WifiForm />
                 </CardBody>
