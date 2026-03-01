@@ -69,7 +69,7 @@ export const WifiForm = () => {
             <FormGroup
 label="Nombre de la Red"
                labelIcon={
-                   <Tooltip content={<div>Actualizar</div>}>
+                   <Tooltip content={<div>Update</div>}>
                        <button type="button" aria-label="nombre de la red wifi a conectarse" onClick={e => { e.preventDefault(); setUpdate(update + 1); console.log(update) }} aria-describedby="form-name-01" className="pf-v5-c-form__group-label-help">
                            <SyncAltIcon />
                        </button>
@@ -88,21 +88,21 @@ label="Nombre de la Red"
                         })}
                     </SelectList>
                 </Select>
-                <Checkbox label="Autoconectar" aria-label="autoconnect" id="autoconnect-checkbox" onChange={ () => setAutoconnect(!autoconnect)} isChecked={autoconnect} />
+                <Checkbox label="Autoconnect" aria-label="autoconnect" id="autoconnect-checkbox" onChange={ () => setAutoconnect(!autoconnect)} isChecked={autoconnect} />
             </FormGroup>
-            <FormGroup label="Contraseña" isRequired fieldId="password-field">
+            <FormGroup label="Password" isRequired fieldId="password-field">
                 <TextInput isRequired type="text" id="password" name="simple-form-email-01" value={password} onChange={handlePasswordChange} />
             </FormGroup>
-            <FormGroup role="group" fieldId="basic-form-checkbox-group" label="Configuracion de IP">
+            <FormGroup role="group" fieldId="basic-form-checkbox-group" label="IP Configuration">
                 <Checkbox label="DHCP" aria-label="DHCP" id="dhcp-checkbox" onChange={ () => setDhcp(!dhcp)} isChecked={dhcp} />
             </FormGroup>
             <FormGroup label="IP" isRequired={!dhcp} fieldId="simple-form-phone-01">
-                <TextInput isRequired={!dhcp} type="ip" id="ip" name="form-ip-01" placeholder="172.17.2.10" value={ip} onChange={handleIpChange} isDisabled={dhcp} />
+                <TextInput isRequired={!dhcp} type="ip" id="ip" name="form-ip-01" placeholder="172.18.0.1" value={ip} onChange={handleIpChange} isDisabled={dhcp} />
             </FormGroup>
-            <FormGroup label="Mascara de subred" isRequired={!dhcp} fieldId="simple-form-phone-01">
+            <FormGroup label="Subnet Mask" isRequired={!dhcp} fieldId="simple-form-phone-01">
                 <TextInput isRequired={!dhcp} type="mask" id="mask" name="form-mask-01" placeholder="24" value={mask} onChange={handleMaskChange} isDisabled={dhcp} />
             </FormGroup>
-            <FormGroup label="Puerta de enlace" isRequired={!dhcp} fieldId="simple-form-phone-01">
+            <FormGroup label="Gateway" isRequired={!dhcp} fieldId="simple-form-phone-01">
                 <TextInput isRequired={!dhcp} type="gateway" id="gateway" name="form-gateway-01" placeholder="172.17.2.1" value={gateway} onChange={handleGatewayChange} isDisabled={dhcp} />
             </FormGroup>
             <ActionGroup>
